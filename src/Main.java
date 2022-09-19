@@ -1,5 +1,15 @@
 public class Main {
     public static void main(String[] args) {
+        task1();
+        task2();
+        task3();
+        task4();
+        task5();
+
+    }
+
+    public static void task1() {
+
         // Задача 1
 
         byte book = 5;
@@ -10,52 +20,89 @@ public class Main {
         double potatoWeight = 3.7;
         boolean catIsAdult = cat > 10;
         char bar = 35;
-        System.out.println (bar);
-        System.out.println (catIsAdult);
+
+    }
+    public static void task2() {
 
         // Задача 2
 
         double weightBoxer1 = 78.2;
         double weightBoxer2 = 82.7;
+
         double totalWeight = weightBoxer1 + weightBoxer2;
-        double weightDifference = weightBoxer2 - weightBoxer1;
+        double weightDifference = Math.abs(weightBoxer1 - weightBoxer2);
+
         System.out.println("Общий вес боксеров " + totalWeight + " кг");
         System.out.println("Разница в весе боксеров " + weightDifference + " кг");
 
+    }
+    public static void task3() {
+
         // Задача 3
 
+        int banana = 5;
         int bananaWeight = 80;
+
+        int milk = 200 / 100;
         int milkWeight = 105;
-        int iceCream = 100;
+
+        int iceCream = 2;
+        int iceCreamWeight = 100;
+
+        int egg = 4;
         int eggWeight = 70;
-        double breakfastWeight = bananaWeight * 5 + milkWeight * 2 +iceCream * 2 + eggWeight * 4;
-        double breakfastWeightKg = breakfastWeight / 1000;
+
+        int breakfastWeight = (banana * bananaWeight) + (milk * milkWeight) + (iceCream * iceCreamWeight) + (egg * eggWeight);
+
+        int gramInKg = 1000;
+
+        double breakfastWeightKg = breakfastWeight / (gramInKg * 1.0);
         System.out.println("Общий вес завтрака " + breakfastWeightKg + " кг");
+    }
+
+    public static void task4() {
 
         // Задача 4
 
-        int loseWeight = 7;
-        double numberOfDays250 = loseWeight / 0.25;
-        double numberOfDays500 = loseWeight / 0.5;
-        double numberOfDaysAverage = (numberOfDays250 + numberOfDays500) / 2;
-        System.out.println("Если спортсмен будет терять каждый день по 250 грамм, понадобиться " + numberOfDays250 + " дней");
-        System.out.println("Если спортсмен будет терять каждый день по 500 грамм, понадобиться " + numberOfDays500 + " дней");
-        System.out.println("В среднем потребуется " + numberOfDaysAverage + " день");
+        int weight = 7;
+        int kgInGrams = 1000;
+        int weightInGrams = weight * kgInGrams;
+
+        int minGramsPerDay = 250;
+        int maxGramsPerDay = 500;
+
+        int mindays = weightInGrams / maxGramsPerDay;
+        int maxdays = weightInGrams / minGramsPerDay;
+
+        int avgDays = (mindays + maxdays) / 2;
+
+        System.out.println("Если спортсмен будет терять каждый день по 250 грамм, понадобиться " + mindays + " дней");
+        System.out.println("Если спортсмен будет терять каждый день по 500 грамм, понадобиться " + maxdays + " дней");
+        System.out.println("В среднем потребуется " + avgDays + " день");
+    }
+
+    public static void task5() {
 
         // Задача 5
 
-        int mashaSalary = 67760;
-        int denisSalary = 83690;
-        int kristinaSalary = 76230;
-        float mashaSalaryIncrease = mashaSalary * 1.1f;
-        float denisSalaryIncrease = denisSalary * 1.1f;
-        float kristinaSalaryIncrease = kristinaSalary * 1.1f;
-        float mashaSalaryYearDifference = (mashaSalaryIncrease - mashaSalary) * 12;
-        float denisSalaryYearDifference = (denisSalaryIncrease - denisSalary) * 12;
-        float kristinaSalaryYearDifference = (kristinaSalaryIncrease - kristinaSalary) * 12;
+        int percent = 10;
+        double multiplier = percent / (100 * 1.0);
+
+        int mashaSalary = 67_760;
+        int denisSalary = 83_690;
+        int kristinaSalary = 76_230;
+
+        int mashaSalaryIncrease = (int) (mashaSalary + (mashaSalary * multiplier));
+        int denisSalaryIncrease = (int) (denisSalary + (denisSalary * multiplier));
+        int kristinaSalaryIncrease = (int) (kristinaSalary + (kristinaSalary * multiplier));
+
+        int mashaSalaryYearDifference = (mashaSalaryIncrease - mashaSalary) * 12;
+        int denisSalaryYearDifference = (denisSalaryIncrease - denisSalary) * 12;
+        int kristinaSalaryYearDifference = (kristinaSalaryIncrease - kristinaSalary) * 12;
 
         System.out.println("Маша теперь получает " + mashaSalaryIncrease + " рублей. Годовой доход вырос на " + mashaSalaryYearDifference + " рублей");
         System.out.println("Денис теперь получает " + denisSalaryIncrease + " рублей. Годовой доход вырос на " + denisSalaryYearDifference + " рублей");
         System.out.println("Кристина теперь получает " + kristinaSalaryIncrease + " рублей. Годовой доход вырос на " + kristinaSalaryYearDifference + " рублей");
+
     }
 }
